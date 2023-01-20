@@ -12,8 +12,8 @@ echo Packaging app...
 tizen package -t wgt
 
 echo Uninstall package...
-tizen uninstall "${package}.${appName}" || :
+tizen uninstall -p "${package}.${appName}" || :
 
 echo Installing package...
-tizen install -n "${package}.wgt"
+tizen install -n "${appName}.wgt"
 popd || return
